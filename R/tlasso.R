@@ -5,6 +5,9 @@ rm(list = ls())
 
 # install.packages("Tlasso")
 
+# [Lyu et al. 2019]
+# Lyu, Xiang, et al. "Tensor graphical model: Non-convex optimization and statistical inference." *IEEE transactions on pattern analysis and machine intelligence* 42.8 (2019): 2024-2037.
+
 # https://cran.r-project.org/web/packages/Tlasso/vignettes/Tlasso.html
 
 library(Tlasso)
