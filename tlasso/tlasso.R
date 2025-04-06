@@ -32,7 +32,7 @@ for (k in 1:length(m.vec)) {
 }
 
 # Separable Tensor Normal Distribution
-DATA <- Tlasso::Trnorm(n = n, m.vec = m.vec, mu = array(0, m.vec), Sigma.list = Sigma.true.list, sd = 1) 
+DATA <- Tlasso::Trnorm(n = n, m.vec = m.vec, mu = array(0, m.vec), Sigma.list = Sigma.true.list, sd = 1) # sd: seed number
 
 dim(DATA)
 DATA
@@ -66,6 +66,7 @@ Tlasso::est.analysis(out.tlasso, Omega.true.list, offdiag = FALSE) # If offdiag 
 # tpr: TPR of each mode
 # tnr: TNR of each mode
 
+# Calculate test statistics
 mat.list <- list() # list of matrices of test statistic value  
 for (k in 1:length(m.vec)) {
     rho <- Tlasso::covres(DATA, out.tlasso, k = k) 

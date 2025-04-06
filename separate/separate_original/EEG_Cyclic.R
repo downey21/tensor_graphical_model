@@ -1,5 +1,14 @@
 # this code file obtains the 'cyclic' estimators for the alcoholic and nonalcoholic group in EEG dataset using Tlasso package
 
+# EEG_dataset.RData contains the EEG dataset.
+# It contains X.mat with size 256 * 64 * 122 and the label y.vec with size 1 * 122.
+# The label y = 1 indicates the individual is from the alcoholic group and
+# y = 0 indicates the individual is from the nonalcoholic group.
+
+# EEG_Separate.R implements the proposed method on the alcoholic and nonalcoholic groups in EEG dataset.
+
+# EEG_Cyclic.R implements the cyclic method using Tlasso package on the alcoholic and nonalcoholic groups in EEG dataset.
+
 rm(list = ls())
 library(tensr)
 library(expm)
