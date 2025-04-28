@@ -178,7 +178,7 @@ for (c in 1:eta.length) {
         S.array[, , i] <- Vi %*% t(Vi)
     }
     S.mat <- apply(S.array, c(1, 2), mean) 
-    loglik[c] <- sum(logdet.fit) - tr(S.mat)
+    loglik[c] <- sum(logdet.fit) - tensr::tr(S.mat)
 }
 
 # optimal value chosen from eta

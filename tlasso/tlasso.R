@@ -41,9 +41,9 @@ DATA
 
 # lambda.thm is regularization parameter
 lambda.thm <- 20 * c(
-    sqrt(log(m.vec[1])/(n*prod(m.vec))), 
-    sqrt(log(m.vec[2])/(n*prod(m.vec))), 
-    sqrt(log(m.vec[3])/(n*prod(m.vec)))
+    sqrt(log(m.vec[1]) / (n * prod(m.vec) * m.vec[1])),
+    sqrt(log(m.vec[2]) / (n * prod(m.vec) * m.vec[2])),
+    sqrt(log(m.vec[3]) / (n * prod(m.vec) * m.vec[3]))
 )
 
 out.tlasso <- Tlasso::Tlasso.fit(DATA, T = 1, lambda.vec = lambda.thm, norm.type = 2, thres = 1e-05) # lambda.vec; Defalut is NULL, s.t. it is tuned via HUGE package directly.
